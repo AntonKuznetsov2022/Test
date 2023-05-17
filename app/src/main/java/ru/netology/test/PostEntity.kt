@@ -9,7 +9,7 @@ data class PostEntity(
     val id: Long,
     val authorId: Long,
     val author: String,
-    val authorAvatar: String,
+    val authorAvatar: String?,
     val authorJob: String?,
     val content: String,
     val published: String,

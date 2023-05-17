@@ -25,14 +25,11 @@ class PostRepositoryImpl(private val postDao: PostDao) : PostRepository {
                 postsResponse.code(),
                 postsResponse.message()
             )
-            //postDao.insert(body.toEntity())
-
-            postDao.getAll()
-
-
+            postDao.insert(body.toEntity())
         } catch (e: IOException) {
             throw NetworkError
         } catch (e: Exception) {
+            e.printStackTrace()
             throw UnknownError
         }
     }
